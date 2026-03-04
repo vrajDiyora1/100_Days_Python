@@ -1,4 +1,4 @@
-## Day <number>: [<Topic>] <Problem Name>
+## Day <1>: [Two Sum] <Problem Name>
 
 #### Purpose
 > What you are learning today and why it matters.
