@@ -1,4 +1,4 @@
-## Day 1: [Longest Common Prefix] 
+## Day 2: Longest Common Prefix 
 
 #### Purpose
 >Write a function to find the longest common prefix string amongst an array of strings.
