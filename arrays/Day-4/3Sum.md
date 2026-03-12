@@ -1,7 +1,7 @@
 ## Day 4: 3Sum
 
 #### Purpose
-> Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+> We need to find all unique triplets in the array that sum to 0.
 
 #### Problem Statement
 > Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
