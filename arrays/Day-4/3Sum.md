@@ -34,11 +34,28 @@ Explanation: The only possible triplet sums up to 0.
 #### Code
 ```python
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
+        op = []
+        nums.sort()
         for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if (i!=j and nums[i] + nums[j] ==target):
-                    return[i,j]
-        return[]
-        
+            if i>0 and nums[i] == nums[i-1]:
+                continue
+
+            y = i + 1
+            z = len(nums)-1
+            
+            while y < z:
+                total = nums[i] + nums[y] + nums[z]
+
+                if total > 0:
+                    z-=1
+                elif total < 0:
+                    y+= 1
+                else:
+                    op.append([nums[i],nums[y],nums[z]])
+                    y+=1
+
+                    while y < z and nums[y] == nums[y-1]:
+                        y+=1
+        return op
  ...
