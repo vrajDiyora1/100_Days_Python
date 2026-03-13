@@ -26,11 +26,20 @@ Output: 4
 #### Code
 ```python
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if (i!=j and nums[i] + nums[j] ==target):
-                    return[i,j]
-        return[]
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        first = 0
+        last = len(nums) -1
+        while first <= last:
+            mid = (first + last) // 2
+
+            if target== nums[mid]:
+                return mid
+            elif target < nums[mid]:
+                last = mid -1
+            else:
+                first = mid + 1
+
+        return first
+
         
  ...
