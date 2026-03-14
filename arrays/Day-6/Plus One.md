@@ -33,11 +33,16 @@ Thus, the result should be [1,0].
 #### Code
 ```python
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if (i!=j and nums[i] + nums[j] ==target):
-                    return[i,j]
-        return[]
-        
+    def plusOne(self, digits: List[int]) -> List[int]:
+        last = len(digits)-1
+
+        while last >=0:
+            if digits[last]<9:
+                digits[last] = digits[last]+1
+                return digits
+
+            digits[last] = 0
+            last-=1
+        return[1]+digits
+
  ...
