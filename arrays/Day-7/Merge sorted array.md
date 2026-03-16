@@ -32,11 +32,8 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 #### Code
 ```python
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                if (i!=j and nums[i] + nums[j] ==target):
-                    return[i,j]
-        return[]
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        nums1[m:] = nums2
+        nums1.sort()
         
  ...
